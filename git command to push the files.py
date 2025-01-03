@@ -1,13 +1,8 @@
-import os
 import subprocess
 import time
 
-# Define the repository path
-repo_path ="/workspaces/NLP"
+# Define the commit message
 commit_message = "Updated all files"
-
-# Change to the repository directory
-os.chdir(repo_path)
 
 def push_changes():
     try:
@@ -29,6 +24,6 @@ try:
     print("Auto-push started. Press Ctrl+C to stop.")
     while True:
         push_changes()
-        time.sleep(10)  # Wait for 1 minute
+        time.sleep(30)# Wait for 1 minute
 except KeyboardInterrupt:
     print("Auto-push stopped.")
